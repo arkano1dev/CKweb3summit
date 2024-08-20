@@ -6,7 +6,7 @@ import { injected, metaMask, safe, walletConnect } from 'wagmi/connectors'
 export const wagmiConfig = createConfig({
   chains: [
     // arbitrum,
-    base,
+    // base,
     mainnet
   ],
   connectors: [
@@ -17,7 +17,7 @@ export const wagmiConfig = createConfig({
   ],
   transports: {
     [mainnet.id]: http(),
-    [base.id]: http(),
+    // [base.id]: http(),
     // [arbitrum.id]: http(),
   },
 })

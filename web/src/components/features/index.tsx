@@ -26,14 +26,19 @@ export default function Features() {
         id="bento"
         className="w-full max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-3 gap-5 items-center mb-16 md:mb-24 lg:mb-44"
       >
-        <div className="w-full h-[25rem] col-span-2 rounded-3xl border-2 p-3 lg:p-5 flex flex-row-reverse">
+        <div className="w-full col-span-2 rounded-3xl border-2 p-3 lg:p-5 flex flex-row-reverse">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" className="hidden md:flex shrink-0 justify-center items-center mx-5">
             <Image
               src="/image/device.svg"
               alt="device"
-              width={300}
-              height={600}
-              className="w-full h-full rounded-lg"
+              width={200}
+              height={400}
+              sizes="100vw"
+              // style={{
+              //   width: '100%',
+              //   height: 'auto',
+              // }}
+              className="rounded-lg"
             />
           </motion.div>
           <div className="flex flex-col w-full">
