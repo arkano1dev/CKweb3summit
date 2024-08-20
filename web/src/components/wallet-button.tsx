@@ -25,44 +25,48 @@ export default function WalletButton() {
   return (
     <div suppressHydrationWarning>
       {!address ? (
-        <Dialog suppressHydrationWarning>
-          <DialogTrigger asChild>
-            <Button className="rounded-lg flex items-center gap-2 bg-foreground/20 backdrop-blur hover:bg-foreground/10 text-foreground">
-              Connect Wallet
-              <ArrowUpRight
-                size={22}
-                className="rounded-full bg-foreground text-background p-1"
-                strokeWidth={1}
-              />
-            </Button>
-          </DialogTrigger>
-          <DialogContent className="sm:max-w-[425px]">
-            <DialogTitle>Connect wallet</DialogTitle>
-            <div className="flex flex-col gap-3 items-start">
-              {!!connectors.length ? (
-                connectors.map((connector) => (
-                  <button
-                    key={connector.uid}
-                    onClick={() => connect({ connector })}
-                  >
-                    {connector.name}
-                  </button>
-                ))
-              ) : (
-                <p>No wallet found. Please download a supported Solana wallet</p>
-              )}
-            </div>
-          </DialogContent>
-        </Dialog>
+        <div suppressHydrationWarning>
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button suppressHydrationWarning className="rounded-lg flex items-center gap-2 bg-foreground/20 backdrop-blur hover:bg-foreground/10 text-foreground">
+                Connect Wallet
+                <ArrowUpRight
+                  size={22}
+                  className="rounded-full bg-foreground text-background p-1"
+                  strokeWidth={1}
+                />
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-[425px]">
+              <DialogTitle suppressHydrationWarning>Connect wallet</DialogTitle>
+              <div className="flex flex-col gap-3 items-start">
+                {!!connectors.length ? (
+                  connectors.map((connector) => (
+                    <button
+                      key={connector.uid}
+                      suppressHydrationWarning
+                      onClick={() => connect({ connector })}
+                    >
+                      {connector.name}
+                    </button>
+                  ))
+                ) : (
+                  <p suppressHydrationWarning>No wallet found. Please download a supported Solana wallet</p>
+                )}
+              </div>
+            </DialogContent>
+          </Dialog>
+        </div>
+
       ) : (
         <div suppressHydrationWarning>
           {status === "pending" ? (
-            <div>Loading ENS name</div>
+            <div suppressHydrationWarning>Loading ENS name</div>
           ) : status === "error" ? (
-            <div>Error fetching ENS name: {error.message}</div>
+            <div suppressHydrationWarning>Error fetching ENS name: {error.message}</div>
           ) : (
-            <div className="flex flex-col justify-center gap-1">
-              <div className="text-xs">
+            <div suppressHydrationWarning className="flex flex-col justify-center gap-1">
+              <div suppressHydrationWarning className="text-xs">
                 {/* {ensAvatar && <img alt="ENS Avatar" src={ensAvatar} />}
                 {address && (
                   <div>
@@ -75,6 +79,7 @@ export default function WalletButton() {
                 size="sm"
                 className="font-link leading"
                 onClick={() => disconnect()}
+                suppressHydrationWarning
               >
                 Disconnect wallet
               </Button>
