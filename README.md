@@ -1,3 +1,15 @@
+Install foundry 
+```curl -L https://foundry.paradigm.xyz | bash```
+
+Compile
+```forge build```
+
+Deploy 
+```forge script script/deploy.s.sol --fork-url https://arbitrum-mainnet.infura.io/v3/yourkey```
+
+
+
+
 ## Foundry
 
 **Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
