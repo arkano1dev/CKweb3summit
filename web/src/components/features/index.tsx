@@ -84,7 +84,7 @@ export default function Features() {
           </motion.div>
           <div className="flex flex-col w-full">
             <motion.h1 variants={fadeUp} initial="hidden" whileInView="visible" className="font-heading text-5xl md:text-7xl tracking-tight text-right">
-              Customizable Investment Strategies:
+              Customizable Investment Strategies
             </motion.h1>
             <div className="flex h-full w-full items-center justify-end">
               <motion.p variants={slideFromRight} initial="hidden" whileInView="visible" className="desc text-right">

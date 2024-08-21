@@ -22,6 +22,8 @@ export default function WalletButton() {
   const { disconnect } = useDisconnect()
 
 
+  console.log("ensName", ensName, address)
+
   return (
     <div suppressHydrationWarning>
       {!address ? (
@@ -60,31 +62,25 @@ export default function WalletButton() {
 
       ) : (
         <div suppressHydrationWarning>
-          {status === "pending" ? (
-            <div suppressHydrationWarning>Loading ENS name</div>
-          ) : status === "error" ? (
-            <div suppressHydrationWarning>Error fetching ENS name: {error.message}</div>
-          ) : (
-            <div suppressHydrationWarning className="flex flex-col justify-center gap-1">
-              <div suppressHydrationWarning className="text-xs">
-                {/* {ensAvatar && <img alt="ENS Avatar" src={ensAvatar} />}
+          <div suppressHydrationWarning className="flex flex-col justify-center gap-1">
+            <div suppressHydrationWarning className="text-xs">
+              {/* {ensAvatar && <img alt="ENS Avatar" src={ensAvatar} />}
                 {address && (
                   <div>
                     {ensName ? `${ensName} (${address})` : address}
                   </div>
                 )} */}
-              </div>
-
-              <Button
-                size="sm"
-                className="font-link leading"
-                onClick={() => disconnect()}
-                suppressHydrationWarning
-              >
-                Disconnect wallet
-              </Button>
             </div>
-          )}
+
+            <Button
+              size="sm"
+              className="font-link leading"
+              onClick={() => disconnect()}
+              suppressHydrationWarning
+            >
+              Disconnect wallet
+            </Button>
+          </div>
         </div>
       )}
     </div>

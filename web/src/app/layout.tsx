@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/components/theme/theme-provider";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import LenisProvider from "@/components/lenis-provider";
+import { ReactToastifyWrapper } from "./wrappper";
 
 const fontSans = localFont({
   src: "../../assets/fonts/TASAOrbiterVF.woff2",
@@ -114,6 +115,8 @@ export default function RootLayout({
             <LenisProvider>{children}</LenisProvider>
           </ThemeProvider>
         </Web3WalletProvider>
+
+        <ReactToastifyWrapper/>
 
       </body>
     </html>
