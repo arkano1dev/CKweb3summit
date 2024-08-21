@@ -25,7 +25,7 @@ export const HeadingText = () => {
         >
           Real-Time
         </motion.span>{" "}
-        and{" "}
+        {" "}
         <motion.span
           animate={{ backgroundColor: ["#db2777", "#ef4444"] }}
           transition={{
