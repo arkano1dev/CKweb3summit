@@ -48,7 +48,7 @@ export function ChartHighLevelComponent({
 
             <div>
                 {Object.entries(chartConfig).map(([key, value]) => (
-                    <div className="flex items-center gap-2">
+                    <div key={key} className="flex items-center gap-2">
                         <div className="w-4 h-4 rounded-full" style={{ backgroundColor: value.color }}></div>
                         <div>{value.label}</div>
                     </div>
