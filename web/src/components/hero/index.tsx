@@ -10,7 +10,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="w-full mt-8 lg:min-h-screen flex flex-col gap-6 justify-center"
+      className="w-full lg:min-h-screen flex flex-col gap-6 justify-center"
     >
       <HeadingText />
       <Link className="w-fit mx-auto mb-4" href='/assets'>
@@ -19,7 +19,7 @@ export default function Hero() {
         </Button>
       </Link>
 
-      <Device />
+      {/* <Device /> */}
 
 
       <div className="block md:hidden w-full justify-center items-center">

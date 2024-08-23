@@ -18,9 +18,11 @@ export default function Home() {
       {/* <div className="hidden md:block w-full">
         <Workflow />
       </div> */}
-      <div className="w-full">
+      {/* <div className="w-full">
         <CobeGlobe />
-      </div>
+      </div> */}
+
+
     </div>
   );
 }

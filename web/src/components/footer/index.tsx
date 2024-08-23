@@ -12,8 +12,16 @@ export default function Footer() {
             <h1 className="text-xl font-semibold">{siteConfig.name}</h1>
           </div>
           <p className="max-w-sm">{siteConfig.description}</p>
+
+          <div className="text-center mt-2 mb-2 text-gray-400">
+        Website design inspired by https://github.com/Sonicrypt/sonicrypt ✨
+      </div>
+
+
         </div>
       </div>
+
+
     </section>
   );
 }
